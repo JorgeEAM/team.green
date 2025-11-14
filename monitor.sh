@@ -1,6 +1,6 @@
 #!/usr/bash
 hostname > consumptions.txt
-$USER
+date >> consumptions.txt
 for i in {1..3}
 do
 	echo "Running Iteration: $i"
