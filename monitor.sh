@@ -1,8 +1,9 @@
 #!/usr/bash
+hostname > consumptions.txt
 for i in {1..3}
 do
 	echo "Running Iteration: $i"
-	top -b -n1 | grep "Cpu(s)" > consumptions.txt
+	top -b -n1 | grep "Cpu(s)" >> consumptions.txt
 	if [ $i != 3 ]; then
 		echo "-----------------------------------------------------"
 	fi
